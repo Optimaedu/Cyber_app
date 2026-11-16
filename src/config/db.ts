@@ -1,12 +1,13 @@
 import { Pool } from "pg"
 
+if(!process.env.DATABASE_URL) {
+    throw new Error("Database url missing in .env")
+}
 
 const db = new Pool({
-    user: "chris2",
-    host: "172.16.1.32",
-    database: "mydb2",
-    password: "1234",
-    port: 5432
+    connectionString: process.env.DATABASE_URL,
+    max: 10,
+    connectionTimeoutMillis: 10000
 })
 
 db.connect((err)=> {

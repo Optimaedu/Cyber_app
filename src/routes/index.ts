@@ -1,6 +1,4 @@
 import { Router } from "express";
-import { error } from "node:console";
-
 
 const router = Router()
 
