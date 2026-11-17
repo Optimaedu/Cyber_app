@@ -10,8 +10,6 @@ router.get("/", (req, res)=> {
     res.json({title: "Welcome to API"})
 })
 
-router.use((req, res)=> {
-    res.status(404).json({error: "Endpoint not found"})
-})
+
 
 export default router
