@@ -1,6 +1,12 @@
-GET http://127.0.0.1:3000/v1/health HTTP/1.1
+GET http://127.0.0.1:3000/v1/client/test HTTP/1.1
+content-type: application/json
+Cookie: token=eyJhbGciOiJIUzI1NiIsIn5cCI6IkpXVCJ9.eyJpZCI6IjJwNGN3a3hvY3NtcjJxZGU4ZHhoIiwiaWF0IjoxNzk1NDMwNTE2fQ.r-NATZjCvj4KZxwMiHgfnwWKTg1h3GFhOS1v9vZbPa0
+
+###
+
+POST http://127.0.0.1:3000/v1/client/register HTTP/1.1
 content-type: application/json
 
 {
-    "hash": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjlyYWc2M2pmem13YndkMWdsa2MzIiwibmFtZSI6ImNocmlzMyIsImlhdCI6MTc5NDkxMDI1NH0.kQwoKereV4RKzzzk2nRQFi80wsNrmahBH9AIHGvOIow"
+    "username": "chris8"
 }

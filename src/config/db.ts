@@ -7,14 +7,17 @@ if(!process.env.DATABASE_URL) {
 const db = new Pool({
     connectionString: process.env.DATABASE_URL,
     max: 10,
-    connectionTimeoutMillis: 10000
+    connectionTimeoutMillis: 1000
 })
 
-db.connect((err)=> {
-    if(err){
-        console.log(err)
-    }
-    console.log("connected")
+db.on("error", (err)=> {
+    console.error("DB pool error:", err.message);
 })
+// db.connect((err)=> {
+//     if(err){
+//         console.log(err)
+//     }
+//     console.log("connected")
+// })
 
 export default db
