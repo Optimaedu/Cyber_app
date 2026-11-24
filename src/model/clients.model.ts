@@ -23,13 +23,11 @@ export async function validateClient(hash:string) {
     return
   }
   const payload = jwt.verify(hash, process.env.JWT_SECRET) as {id:string}
-  if(!payload) {
-    throw new Error("hash missing")
-  }
+  if (typeof payload === "string" || typeof payload.id !== "string") return null;
   try {
     console.log(payload)
     const client = await db.query("SELECT player_id, name FROM api_clients WHERE player_id = $1", [payload.id])
-    return client.rows[0]
+    return client.rows[0] ?? null
   } catch (error) {
     console.log(error)
     return error

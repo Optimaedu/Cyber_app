@@ -1,6 +1,6 @@
 GET http://127.0.0.1:3000/v1/client/test HTTP/1.1
 content-type: application/json
-Cookie: token=eyJhbGciOiJIUzI1NiIsIn5cCI6IkpXVCJ9.eyJpZCI6IjJwNGN3a3hvY3NtcjJxZGU4ZHhoIiwiaWF0IjoxNzk1NDMwNTE2fQ.r-NATZjCvj4KZxwMiHgfnwWKTg1h3GFhOS1v9vZbPa0
+Cookie: token=eyhbGciOiJIUzI1NiIsIn5cCI6IkpXVCJ9.eyJpZCI6ImFoYnhmZHh2a2M0bjc3aXZucXU5IiwiaWF0IjoxNzk1NDM0MjI4fQ.MPNCH8YJnokKPIPNTxKVItf8M4pCUCUbEodNm2RI7TA
 
 ###
 
@@ -8,5 +8,5 @@ POST http://127.0.0.1:3000/v1/client/register HTTP/1.1
 content-type: application/json
 
 {
-    "username": "chris8"
+    "username": "chris9"
 }
